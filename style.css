@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Oxanium", sens-serif;
+    cursor: none;
+} *::selection{
+    background-color: #23e701;
+    color: #000000;
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    background-color: #23e701;
+}
+.outline{
+    height: 40px;
+    width: 40px;
+    background-color: #23e701;
+    opacity: 0.5;
+}
+.dot, .outline {
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+body{
+    height: 100vh;
+    background-color: #0e0e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    padding: 40px;
+    color: #23e701;
+    height: 550px;
+    width: 1000px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid #23e701;
+    box-shadow: 0 0 20px #23e701;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 80px;
+}
+.description{
+    font-size: 40px;
+    text-align: center;
+}
+.level{
+    font-size: 30px;
+    margin-top: 60px;
+    text-align: center;
+}
+button{
+    height: 50px;
+    width: 200px;
+    background-color: #000000;
+    border: 3px solid #23e701;
+    color: #23e701;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+button:hover{
+    background-color: #23e701;
+    color: #000000;
+    border: none;
+}
+.startBtn{
+    height: 50px;
+    width: 200px;
+    background-color: #23e701;
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    font-weight: bolder;
+}
+.startBtn:hover{
+    background-color: #000000;
+    color: #23e701;
+    border: 3px solid #23e701;
+}
+.start{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+.start p{
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    background: inherit;
+    cursor: none;
+}

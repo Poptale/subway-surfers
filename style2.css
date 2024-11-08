@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Oxanium", sens-serif;
+    color: #23e701;
+    cursor: none;
+}*::selection{
+    background-color: #23e701;
+    color: #000000;
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    background-color: #23e701;
+}
+.outline{
+    height: 40px;
+    width: 40px;
+    background-color: #23e701;
+    opacity: 0.5;
+}
+.dot, .outline {
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+body{
+    height: 100vh;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading-container{
+    font-size: 30px;
+    text-align: center;
+}
+p{
+    font-size: 30px;
+    text-align: center;
+}
+.game{
+    padding-top: 0px;
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    width: 450px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid #23e701;
+    box-shadow: 0 0 20px #23e701;
+}
+.inside-game{
+    display: none;
+}
+button{
+    height: 50px;
+    width: 200px;
+    background-color: #000000;
+    border: 3px solid #23e701;
+    color: #23e701;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+button:hover{
+    background-color: #23e701;
+    color: #000000;
+    border: none;
+}
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.dis{
+    font-size: 30px;
+    margin-top: 50px;
+}
+.border{
+    display: inline;
+    width: 150px;
+    border: 2px solid #23e701;
+    color: #23e701;
+    text-align: center;
+    font-size: 25px;
+}
+.border p{
+    margin-top: 25px;
+    text-shadow: 0 0 5px;
+}
+.border-container{
+    display: flex;
+    flex-direction: row;
+}
+.character{
+    z-index: 11;
+    display: flex;
+    background-color: #23e701;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 450px;
+    left: 0px;
+    border-radius: 5px;
+}
+.block{
+    z-index: 9;
+    display: flex;
+    height: 150px;
+    width: 150px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+    animation: anime linear infinite;
+    animation-duration: 0.8s;
+}
+@keyframes anime {
+    0%{
+        top: -100px;
+    }
+    100%{
+        top: 700px;
+    }
+}
+.coin{
+    z-index: 10;
+    display: flex;
+    height: 150px;
+    width: 150px;
+    background-color: #23e701;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    animation: coinAnime linear infinite;
+    animation-duration: 0.8s;
+}
+@keyframes coinAnime {
+    0%{
+        top: -290px;
+    }
+    100%{
+        top: 500px;
+    }
+}
+.score1{
+    position: absolute;
+    top: 10px;
+    left: 600px;
+}
+
+.coinCollected{
+    position: absolute;
+    top: 10px;
+    left: 800px;
+}
